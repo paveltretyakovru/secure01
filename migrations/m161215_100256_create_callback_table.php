@@ -14,6 +14,12 @@ class m161215_100256_create_callback_table extends Migration
     {
         $this->createTable('callback', [
             'id' => $this->primaryKey(),
+            'name' => $this->string(),
+            'phone' => $this->string(12)->notNull(),
+            'subject' => $this->string()->notNull(),
+            'message' => $this->text(),
+            'feedback' => $this->boolean(),
+            'created_at' => $this->dateTime()
         ]);
     }
 
