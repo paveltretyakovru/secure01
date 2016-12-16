@@ -7,6 +7,7 @@
   $ git clone https://github.com/ptretyakov/secure01.git secure01
   $ cd ~/secure01
   $ composer install
+  $ bower install
   $ cp .env.example .env
   $ # Change db connection configs
   $ nano ./.env
