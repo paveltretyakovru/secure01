@@ -1,0 +1,21 @@
+{
+  "name": "secure01",
+  "homepage": "https://github.com/ptretyakov/secure01",
+  "authors": [
+    "Tretyakov Pavel <tretyakovpavel.ru@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "arcticModal": "*"
+  }
+}

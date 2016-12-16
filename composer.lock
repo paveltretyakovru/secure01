@@ -416,12 +416,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "de2103e2804cdcd0dc8bfa242c9aa1e3915289db"
+                "reference": "5a9efb6ea7c3ca84a4ac978363c396d61878e11b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/de2103e2804cdcd0dc8bfa242c9aa1e3915289db",
-                "reference": "de2103e2804cdcd0dc8bfa242c9aa1e3915289db",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/5a9efb6ea7c3ca84a4ac978363c396d61878e11b",
+                "reference": "5a9efb6ea7c3ca84a4ac978363c396d61878e11b",
                 "shasum": ""
             },
             "require": {
@@ -502,7 +502,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2016-12-14 20:51:21"
+            "time": "2016-12-16 02:08:02"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -560,16 +560,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-composer.git",
-                "reference": "c6a294f01630e89f8ccc6209edb9ed8fbf008ac4"
+                "reference": "f55d47ac0b284257663e2d077c97677f3aaec238"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/c6a294f01630e89f8ccc6209edb9ed8fbf008ac4",
-                "reference": "c6a294f01630e89f8ccc6209edb9ed8fbf008ac4",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/f55d47ac0b284257663e2d077c97677f3aaec238",
+                "reference": "f55d47ac0b284257663e2d077c97677f3aaec238",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -599,7 +602,7 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2016-12-02 17:13:38"
+            "time": "2016-12-15 15:02:05"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -2920,12 +2923,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "7b0e057815538db776d0a9c74532faa41ef7cb40"
+                "reference": "fa4156df93910f59662a2c1ca0d138803807ade6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/7b0e057815538db776d0a9c74532faa41ef7cb40",
-                "reference": "7b0e057815538db776d0a9c74532faa41ef7cb40",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/fa4156df93910f59662a2c1ca0d138803807ade6",
+                "reference": "fa4156df93910f59662a2c1ca0d138803807ade6",
                 "shasum": ""
             },
             "require": {
@@ -2959,7 +2962,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2016-12-12 13:51:36"
+            "time": "2016-12-15 14:50:58"
         },
         {
             "name": "yiisoft/yii2-faker",

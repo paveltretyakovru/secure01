@@ -1,6 +1,9 @@
 <?php
 use yii\helpers\Html;
 
+use app\assets\Secure01Asset;
+
+Secure01Asset::register($this);
 /* @var $this yii\web\View */
 /* @var $content string */
 ?>
@@ -533,7 +536,7 @@ use yii\helpers\Html;
               </div>
             </div>
             <div class="col-xs-6 pull-right text-left navigation__item--sub">
-              <a href="javascript: void(null);" class="presentation__link">
+              <a target="_blank" href="/pdf/pdf_example.pdf" class="presentation__link">
                 Презентация
               </a>
             </div>
@@ -679,6 +682,8 @@ use yii\helpers\Html;
       <div class="col-xs-12">
         <div class="swiper-container">
           <div class="swiper-wrapper">
+
+            <!-- repeat .swiper-slide for slider content -->
             <div class="swiper-slide">
               <div class="slide slide1">
                 <div class="slider__text">
@@ -697,42 +702,7 @@ use yii\helpers\Html;
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="slide slide2">
-                <div class="slider__text">
-                  <h3>
-                    Почему мы
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea com.
-                  </p>
-                  <a href="javascript: void(null);" class="cta">
-                    Заказать
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="slide slide3">
-                <div class="slider__text">
-                  <h3>
-                    Почему мы
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea com.
-                  </p>
-                  <a href="javascript: void(null);" class="cta">
-                    Заказать
-                  </a>
-                </div>
-              </div>
-            </div>
+
           </div>
           <div class="swiper-button-prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -757,55 +727,6 @@ use yii\helpers\Html;
     <div class="row">
       <div class="col-xs-12">
         <?= $content ?>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-        <img src="/img/prod.jpg" alt="">
-        <h3>Пожарная <br> сигнализация</h3>
-        <p>
-          Вы экономите свое время, сразу отсеивая неадекватных или случайных кандидатов.
-        </p>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-        <img src="/img/prod.jpg" alt="">
-        <h3>Пожарная <br> сигнализация</h3>
-        <p>
-          Вы экономите свое время, сразу отсеивая неадекватных или случайных кандидатов.
-        </p>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-        <img src="/img/prod.jpg" alt="">
-        <h3>Пожарная <br> сигнализация</h3>
-        <p>
-          Вы экономите свое время, сразу отсеивая неадекватных или случайных кандидатов.
-        </p>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-        <img src="/img/prod.jpg" alt="">
-        <h3>Пожарная <br> сигнализация</h3>
-        <p>
-          Вы экономите свое время, сразу отсеивая неадекватных или случайных кандидатов.
-        </p>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-        <img src="/img/prod.jpg" alt="">
-        <h3>Пожарная <br> сигнализация</h3>
-        <p>
-          Вы экономите свое время, сразу отсеивая неадекватных или случайных кандидатов.
-        </p>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-        <img src="/img/prod.jpg" alt="">
-        <h3>Пожарная <br> сигнализация</h3>
-        <p>
-          Вы экономите свое время, сразу отсеивая неадекватных или случайных кандидатов.
-        </p>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-        <img src="/img/prod.jpg" alt="">
-        <h3>Пожарная <br> сигнализация</h3>
-        <p>
-          Вы экономите свое время, сразу отсеивая неадекватных или случайных кандидатов.
-        </p>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
         <img src="/img/prod.jpg" alt="">
@@ -886,39 +807,6 @@ use yii\helpers\Html;
     <div class="row quick_links">
       <div class="col-xs-3">
         <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-      </div>
-      <div class="col-xs-3">
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-      </div>
-      <div class="col-xs-3 text-right">
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-      </div>
-      <div class="col-xs-3 text-right">
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-        <a href="javascript: void(null);">Быстрые ссылки</a>
       </div>
     </div>
   </div>
@@ -931,6 +819,8 @@ use yii\helpers\Html;
 
 <script src="/js/vendor/ripple.min.js"></script>
 <script src="/js/main.js"></script>
+
+<!-- PLUGINS LEVEL -->
 
 <?php $this->endBody() ?>
 </body>
