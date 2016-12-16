@@ -811,6 +811,35 @@ Secure01Asset::register($this);
     </div>
   </div>
 </div>
+
+<!-- Modals -->
+<div style="display: none;">
+  <div class="box-modal" id="orderModal">
+    <div class="box-modal_close arcticmodal-close">
+      Закрыть
+    </div>
+    <form>
+      <div class="form-group">
+        <label for="inputOrderName">Имя</label>
+        <input class="form-control" type="text" name="name" id="inputOrderName">
+      </div>
+      <div class="form-group">
+        <label for="inputOrderPhone">Телефон*</label>
+        <input class="form-control" type="text" name="phone" id="inputOrderPhone">
+      </div>
+      <div class="form-group">
+        <label for="inputOrderSubject">Тема*</label>
+        <input class="form-control" type="text" name="subject" id="inputOrderSubject">
+      </div>
+      <div class="form-group">
+        <label for="textareaOrderMessage">Сообщение*</label>
+        <textarea class="form-control" name="message" rows="8" cols="40"></textarea>
+      </div>
+      <button type="submit" class="btn btn-default">Заказать</button>
+    </form>
+  </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -819,6 +848,7 @@ Secure01Asset::register($this);
 
 <script src="/js/vendor/ripple.min.js"></script>
 <script src="/js/main.js"></script>
+<script src="/js/pageActions.js"></script>
 
 <!-- PLUGINS LEVEL -->
 
