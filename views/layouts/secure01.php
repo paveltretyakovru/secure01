@@ -813,6 +813,7 @@ Secure01Asset::register($this);
 </div>
 
 <!-- Modals -->
+<!-- ORDER MODAL -->
 <div style="display: none;">
   <div class="box-modal" id="orderModal">
     <div class="box-modal_close arcticmodal-close">
@@ -839,6 +840,30 @@ Secure01Asset::register($this);
     </form>
   </div>
 </div>
+<!-- /ORDER MODAL -->
+
+<!-- CALLBACK MODAL -->
+<div style="display: none;">
+  <div class="box-modal" id="callbackModal">
+    <div class="box-modal_close arcticmodal-close">
+      Закрыть
+    </div>
+    <form>
+      <div class="form-group">
+        <label for="inputCallbackName">Ваше имя</label>
+        <input class="form-control" type="text" name="name" id="inputCallbackName" />
+      </div>
+      <div class="form-group">
+        <label for="inputCallbackPhone">Номер телефона</label>
+        <input class="form-control" type="text" name="phone" id="inputCallbackPhone" />
+      </div>
+      <button type="submit" class="btn btn-default">
+        Заказать обратный звонок
+      </button>
+    </form>
+  </div>
+</div>
+<!-- /CALLBACK MODAL -->
 
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.jquery.min.js"></script>
