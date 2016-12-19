@@ -1,9 +1,13 @@
 <?php
 use yii\helpers\Html;
 
-use app\assets\Secure01Asset;
+use app\assets\VendorBowerAsset;
+use app\assets\AppAsset;
+use app\assets\AdminAsset;
 
-Secure01Asset::register($this);
+VendorBowerAsset::register($this);
+AppAsset::register($this);
+AdminAsset::register($this);
 /* @var $this yii\web\View */
 /* @var $content string */
 ?>
@@ -98,324 +102,9 @@ Secure01Asset::register($this);
   </div>
 </div>
 
-<div class="header__wrapper">
-  <a href="javascript: void(null);" class="logo">
-      <img src="/img/logo_ogon.png" alt="logo">
-  </a>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="header">
-          <div class="row navigation ">
-            <div class="col-xs-6 pull-left">
-              <div class="row">
-                <div class="col-xs-4 pull-left text-left navigation__item" data-target="#main">
+<!-- need include menu component -->
+<?= $this->render('../components/menu') ?>
 
-                  <span>Главная</span>
-
-                </div>
-                <div class="col-xs-4 pull-left text-center navigation__item" data-target="#service">
-                  <span>Услуги</span>
-                  <div id="main" class="navigation__panel">
-                    <div class="row">
-                      <div class="col-md-3">
-                        <a href="javascript: void(null);">
-                          1 Проектирование и монтаж
-                        </a>
-                        <a href="javascript: void(null);">
-                          Техническое обслуж. систем любой сложности
-                        </a>
-                        <a href="javascript: void(null);">
-                          Рассчитаем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Разработаем и согласуем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Испытание и защита конструкций
-                        </a>
-                      </div>
-                      <div class="col-md-3">
-                        <a href="javascript: void(null);">
-                          Проектирование и монтаж
-                        </a>
-                        <a href="javascript: void(null);">
-                          Техническое обслуж. систем любой сложности
-                        </a>
-                        <a href="javascript: void(null);">
-                          Рассчитаем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Разработаем и согласуем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Испытание и защита конструкций
-                        </a>
-                      </div>
-                      <div class="col-md-3">
-                        <a href="javascript: void(null);">
-                          Проектирование и монтаж
-                        </a>
-                        <a href="javascript: void(null);">
-                          Техническое обслуж. систем любой сложности
-                        </a>
-                        <a href="javascript: void(null);">
-                          Рассчитаем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Разработаем и согласуем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Испытание и защита конструкций
-                        </a>
-                      </div>
-                      <div class="col-md-3">
-                        <img src="/img/prod.jpg" alt="">
-                        <h3>Пожарная <br> сигнализация</h3>
-                        <p>
-                          Вы экономите свое время, сразу отсеивая неадекватных или случайных кандидатов.
-                        </p>
-                        <a href="javascript: void(null);" class="cta">
-                          Заказать
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-4 pull-left text-right navigation__item" data-target="#main">
-                  <span>Цены</span>
-                  <div id="main" class="navigation__panel">
-                    <div class="row">
-                      <div class="col-md-3">
-                        <a href="javascript: void(null);">
-                          1 Проектирование и монтаж
-                        </a>
-                        <a href="javascript: void(null);">
-                          Техническое обслуж. систем любой сложности
-                        </a>
-                        <a href="javascript: void(null);">
-                          Рассчитаем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Разработаем и согласуем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Испытание и защита конструкций
-                        </a>
-                      </div>
-                      <div class="col-md-3">
-                        <a href="javascript: void(null);">
-                          Проектирование и монтаж
-                        </a>
-                        <a href="javascript: void(null);">
-                          Техническое обслуж. систем любой сложности
-                        </a>
-                        <a href="javascript: void(null);">
-                          Рассчитаем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Разработаем и согласуем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Испытание и защита конструкций
-                        </a>
-                      </div>
-                      <div class="col-md-3">
-                        <a href="javascript: void(null);">
-                          Проектирование и монтаж
-                        </a>
-                        <a href="javascript: void(null);">
-                          Техническое обслуж. систем любой сложности
-                        </a>
-                        <a href="javascript: void(null);">
-                          Рассчитаем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Разработаем и согласуем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Испытание и защита конструкций
-                        </a>
-                      </div>
-                      <div class="col-md-3">
-                        <img src="/img/prod.jpg" alt="">
-                        <h3>Пожарная <br> сигнализация</h3>
-                        <p>
-                          Вы экономите свое время, сразу отсеивая неадекватных или случайных кандидатов.
-                        </p>
-                        <a href="javascript: void(null);" class="cta">
-                          Заказать
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-6 pull-right ">
-              <div class="row">
-                <div class="col-xs-4 pull-left text-left navigation__item" data-target="#service">
-                  <span>Проекты</span>
-                  <div id="main" class="navigation__panel">
-                    <div class="row">
-                      <div class="col-md-3">
-                        <a href="javascript: void(null);">
-                          1 Проектирование и монтаж
-                        </a>
-                        <a href="javascript: void(null);">
-                          Техническое обслуж. систем любой сложности
-                        </a>
-                        <a href="javascript: void(null);">
-                          Рассчитаем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Разработаем и согласуем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Испытание и защита конструкций
-                        </a>
-                      </div>
-                      <div class="col-md-3">
-                        <a href="javascript: void(null);">
-                          Проектирование и монтаж
-                        </a>
-                        <a href="javascript: void(null);">
-                          Техническое обслуж. систем любой сложности
-                        </a>
-                        <a href="javascript: void(null);">
-                          Рассчитаем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Разработаем и согласуем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Испытание и защита конструкций
-                        </a>
-                      </div>
-                      <div class="col-md-3">
-                        <a href="javascript: void(null);">
-                          Проектирование и монтаж
-                        </a>
-                        <a href="javascript: void(null);">
-                          Техническое обслуж. систем любой сложности
-                        </a>
-                        <a href="javascript: void(null);">
-                          Рассчитаем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Разработаем и согласуем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Испытание и защита конструкций
-                        </a>
-                      </div>
-                      <div class="col-md-3">
-                        <img src="/img/prod.jpg" alt="">
-                        <h3>Пожарная <br> сигнализация</h3>
-                        <p>
-                          Вы экономите свое время, сразу отсеивая неадекватных или случайных кандидатов.
-                        </p>
-                        <a href="javascript: void(null);" class="cta">
-                          Заказать
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-4 pull-left text-center navigation__item" data-target="#main">
-                  <span>Информация</span>
-                  <div id="main" class="navigation__panel">
-                    <div class="row">
-                      <div class="col-md-3">
-                        <a href="javascript: void(null);">
-                          1 Проектирование и монтаж
-                        </a>
-                        <a href="javascript: void(null);">
-                          Техническое обслуж. систем любой сложности
-                        </a>
-                        <a href="javascript: void(null);">
-                          Рассчитаем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Разработаем и согласуем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Испытание и защита конструкций
-                        </a>
-                      </div>
-                      <div class="col-md-3">
-                        <a href="javascript: void(null);">
-                          Проектирование и монтаж
-                        </a>
-                        <a href="javascript: void(null);">
-                          Техническое обслуж. систем любой сложности
-                        </a>
-                        <a href="javascript: void(null);">
-                          Рассчитаем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Разработаем и согласуем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Испытание и защита конструкций
-                        </a>
-                      </div>
-                      <div class="col-md-3">
-                        <a href="javascript: void(null);">
-                          Проектирование и монтаж
-                        </a>
-                        <a href="javascript: void(null);">
-                          Техническое обслуж. систем любой сложности
-                        </a>
-                        <a href="javascript: void(null);">
-                          Рассчитаем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Разработаем и согласуем
-                        </a>
-                        <a href="javascript: void(null);">
-                          Испытание и защита конструкций
-                        </a>
-                      </div>
-                      <div class="col-md-3">
-                        <img src="/img/prod.jpg" alt="">
-                        <h3>Пожарная <br> сигнализация</h3>
-                        <p>
-                          Вы экономите свое время, сразу отсеивая неадекватных или случайных кандидатов.
-                        </p>
-                        <a href="javascript: void(null);" class="cta">
-                          Заказать
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-4 pull-left text-right navigation__item" data-target="#service">
-                  <span>Контакты</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row navigation__sub">
-            <div class="col-xs-6 pull-left text-right navigation__item--sub">
-              <a href="mailto:bez-01@bk.ru" class="mail-link">
-                bez-01@bk.ru
-              </a>
-              <div class="sub-menu" id="mobile-menu">
-                Меню
-              </div>
-            </div>
-            <div class="col-xs-6 pull-right text-left navigation__item--sub">
-              <a target="_blank" href="/pdf/pdf_example.pdf" class="presentation__link">
-                Презентация
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <!-- <div id="main" class="navigation__panel">
   <div class="row">
     <div class="col-md-3">
@@ -546,64 +235,22 @@ Secure01Asset::register($this);
     </div>
   </div>
 </div> -->
-<div class="carousel">
-  <div class="carousel__wrapper">
-    <div class="row ">
-      <div class="col-xs-12">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
 
-            <!-- repeat .swiper-slide for slider content -->
-            <div class="swiper-slide">
-              <div class="slide slide1">
-                <div class="slider__text">
-                  <h3>
-                    Почему мы
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea com.
-                  </p>
-                  <a href="javascript: void(null);" class="cta">
-                    Заказать
-                  </a>
-                </div>
-              </div>
-            </div>
+<!-- here setting whyWeSlider component -->
+<?= $this->render('../components/whyWeSlider'); ?>
 
-          </div>
-          <div class="swiper-button-prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          </div>
-          <div class="swiper-button-next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="main">
   <div class=" container">
     <div class="row">
       <div class="col-xs-12">
         <h1>
-          Услуги
+          <!-- Услуги -->
         </h1>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12">
         <?= $content ?>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-        <img src="/img/prod.jpg" alt="">
-        <h3>Пожарная <br> сигнализация</h3>
-        <p>
-          Вы экономите свое время, сразу отсеивая неадекватных или случайных кандидатов.
-        </p>
       </div>
     </div>
     <div class="row">
@@ -615,52 +262,6 @@ Secure01Asset::register($this);
     </div>
   </div>
 </div>
-  <!-- content -->
-  <div class="slider">
-    <div class=" container">
-      <div class="row">
-        <div class="col-xs-12 text-center">
-          <h1>
-            Нашы работы
-          </h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 slider__wrapper">
-          <div class="swiper-container2">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="/img/img_slider.png" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="/img/img_slider.png" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="/img/img_slider.png" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="/img/img_slider.png" alt="">
-              </div>
-            </div>
-            <div class="swiper-button-prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            </div>
-            <div class="swiper-button-next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 text-left">
-          <a href="javascript: void(null);" class="cta">
-            Заказать
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
   <!-- content -->
 <!-- footer -->
@@ -735,19 +336,18 @@ Secure01Asset::register($this);
 </div>
 <!-- /CALLBACK MODAL -->
 
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 
-<script src="/js/plugins.js"></script>
+<!-- <script src="/js/plugins.js"></script> -->
 
-<script src="/js/vendor/ripple.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/pageActions.js"></script>
-
-<!-- PLUGINS LEVEL -->
+<!-- <script src="/js/vendor/ripple.min.js"></script> -->
+<!-- <script src="/js/main.js"></script> -->
+<!-- <script src="/js/pageActions.js"></script> -->
 
 <?php $this->endBody() ?>
+
 </body>
 </html>
 <?php $this->endPage() ?>

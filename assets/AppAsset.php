@@ -17,13 +17,10 @@ class AppAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
-    public $css = [
-        'css/site.css',
-    ];
+    public $css = [];
     public $js = [
-    ];
-    public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+      'js/vendor/ripple.min.js',
+      'js/main.js',
+      'js/pageActions.js',
     ];
 }
