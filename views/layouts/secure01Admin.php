@@ -58,6 +58,12 @@ AdminAsset::register($this);
           Url::to(['admin/posts']);
         ?>">Статьи<span class="sr-only">(current)</span></a></li>
 
+        <li <?=
+          (strpos($this->title, 'Slides') !== false) ? 'class="active"' : '';
+        ?>><a href="<?=
+          Url::to(['admin/slides']);
+        ?>">Слайды<span class="sr-only">(current)</span></a></li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/logout">Выход</a></li>
