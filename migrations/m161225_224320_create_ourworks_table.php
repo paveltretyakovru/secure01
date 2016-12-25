@@ -14,8 +14,8 @@ class m161225_224320_create_ourworks_table extends Migration
     {
         $this->createTable('ourworks', [
             'id' => $this->primaryKey(),
-            'url' => $this->string(),
-            'title' => $this->string(),
+            'url' => $this->string()->notNull(),
+            'title' => $this->string()->notNull(),
         ]);
     }
 
