@@ -34,7 +34,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'desc:ntext',
             'longdesc:ntext',
             'image',
-            'menupost',
             'created_at',
             'updated_at',
         ],

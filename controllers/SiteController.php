@@ -124,4 +124,24 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    /**
+     * Get main menu links pages
+     * @return array
+     */
+    public function getMainMenuPages() {
+      $pages = \app\models\Pages::find()
+        ->asArray()
+        ->all();
+
+      return $pages;
+    }
+
+    public function getSubmenuPages() {
+      $subpages = \app\models\Post::find()
+        ->asArray()
+        ->all();
+
+      return $subpages;
+    }
 }

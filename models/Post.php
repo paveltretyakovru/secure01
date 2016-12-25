@@ -13,12 +13,13 @@ use Yii;
  * @property string $desc
  * @property string $longdesc
  * @property string $image
- * @property integer $menupost
  * @property string $created_at
  * @property string $updated_at
  */
 class Post extends \yii\db\ActiveRecord
 {
+    public $file;
+
     /**
      * @inheritdoc
      */
@@ -34,12 +35,11 @@ class Post extends \yii\db\ActiveRecord
     {
         return [
             ['page_id', 'integer'],
-            ['menupost', 'boolean'],
             [['title', 'created_at'], 'required'],
             [['desc', 'longdesc'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
-            ['title', 'string', 'max' => 255],
-            ['image', 'file', 'extensions' => 'png, jpg'],
+            [['title', 'image'], 'string', 'max' => 255],
+            ['file', 'file', 'extensions' => 'png, jpg'],
         ];
     }
 
@@ -51,13 +51,12 @@ class Post extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'page_id' => 'Page ID',
-            'title' => 'Title',
-            'desc' => 'Desc',
-            'longdesc' => 'Longdesc',
-            'image' => 'Image',
-            'menupost' => 'Menupost',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'title' => 'Заголовок',
+            'desc' => 'Описание',
+            'longdesc' => 'Длинное описание',
+            'image' => 'Изображение',
+            'created_at' => 'Создано',
+            'updated_at' => 'Обновлено',
         ];
     }
 }

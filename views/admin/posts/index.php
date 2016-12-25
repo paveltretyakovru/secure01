@@ -30,8 +30,22 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'desc:ntext',
             'longdesc:ntext',
-            // 'image',
-            // 'menupost',
+            [
+              'attribute' => 'image',
+              'format' => 'html',
+              'value' => function($data) {
+                if(!empty($data['image'])) {
+                  return Html::img(
+                    '/media/' . $data['image'],
+                    [
+                      'width' => 100,
+                    ]
+                  );
+                } else {
+                  return '';
+                }
+              },
+            ],
             // 'created_at',
             // 'updated_at',
 

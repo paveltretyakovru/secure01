@@ -25,9 +25,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'longdesc') ?>
 
-    <?php // echo $form->field($model, 'image') ?>
-
-    <?php // echo $form->field($model, 'menupost') ?>
+    <?php echo $form->field($model, 'image') ?>
 
     <?php // echo $form->field($model, 'created_at') ?>
 

@@ -8,6 +8,7 @@ use app\models\PostSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * PostsController implements the CRUD actions for Post model.
@@ -15,6 +16,16 @@ use yii\filters\VerbFilter;
 class PostsController extends Controller
 {
     public $layout = 'secure01Admin';
+
+    public function createDirectory($path) {
+        //$filename = "/folder/{$dirname}/";
+        if (file_exists($path)) {
+            //echo "The directory {$path} exists";
+        } else {
+            mkdir($path, 0775, true);
+            //echo "The directory {$path} was successfully created.";
+        }
+    }
 
     /**
      * @inheritdoc
@@ -66,12 +77,42 @@ class PostsController extends Controller
     public function actionCreate()
     {
         $model = new Post();
+        $pages = $this->getPagesArray();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+
+            $file = UploadedFile::getInstance($model, 'image');
+
+            if( $file && $file->tempName ) {
+              $model->file = $file;
+
+              $dir = Yii::getAlias('@webroot/media/');
+              $fileName = $model->file->baseName.'.'.$model->file->extension;
+              $model->file->saveAs($dir . $fileName);
+              $model->file = $fileName;
+              $model->image = $fileName;
+            }
+
+            $date = new \DateTime();
+            $model->setAttributes(['created_at' => $date->getTimestamp()]);
+
+            if ($model->validate()) {
+              if($model->save(false)) {
+                return $this->redirect(['view', 'id' => $model->id]);
+              }
+            } else {
+              $errors = $model->errors;
+
+              return $this->render('create', [
+                  'model' => $model,
+                  'pages' => $pages,
+              ]);
+            }
+
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'pages' => $pages,
             ]);
         }
     }
@@ -85,12 +126,53 @@ class PostsController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $pages = $this->getPagesArray();
+        $current_image = $model->image;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            $file = UploadedFile::getInstance($model, 'image');
+
+            if($file && $file->tempName) {
+              $model->file = $file;
+
+              if($model->validate(['file'])) {
+
+                // Delete current image
+                $alias = Yii::getAlias('@webroot/media/'.$current_image);
+                if(file_exists($alias) && is_file($alias)) {
+                  unlink($alias);
+                  $model->image = '';
+                }
+              }
+
+              $dir = Yii::getAlias('@webroot/media/');
+              $fileName = $model->file->baseName.'.'.$model->file->extension;
+              $model->file->saveAs($dir . $fileName);
+              $model->file = $fileName;
+              $model->image = $fileName;
+            } else {
+              $model->image = $current_image;
+            }
+
+            if ($model->validate()) {
+              if($model->save(false)) {
+                return $this->redirect(['view', 'id' => $model->id]);
+              }
+            } else {
+              $errors = $model->errors;
+
+              return $this->render('update', [
+                  'model' => $model,
+                  'pages' => $pages,
+              ]);
+            }
         } else {
+            // echo "<pre>";
+            // print_r($pages);
+            // echo "</pre>";
             return $this->render('update', [
                 'model' => $model,
+                'pages' => $pages,
             ]);
         }
     }
@@ -122,5 +204,22 @@ class PostsController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    /**
+     * Get main menu links pages
+     * @return array
+     */
+    public function getPagesArray() {
+      $result = [0 => 'Выберите категорию меню, которой пренадлежит эта статья'];
+      $pages = \app\models\Pages::find()
+        ->asArray()
+        ->all();
+
+      foreach($pages as $page) {
+        $result[$page['id']] = $page['title'];
+      }
+
+      return $result;
     }
 }

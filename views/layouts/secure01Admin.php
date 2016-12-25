@@ -67,7 +67,7 @@ AdminAsset::register($this);
 </nav>
 
 <main>
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col-xs-12">
         <?= $content ?>

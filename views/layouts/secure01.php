@@ -10,6 +10,9 @@ AppAsset::register($this);
 AdminAsset::register($this);
 /* @var $this yii\web\View */
 /* @var $content string */
+
+$pages = \Yii::$app->controller->getMainMenuPages();
+$subpages = \Yii::$app->controller->getSubmenuPages();
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -50,36 +53,14 @@ AdminAsset::register($this);
     <div class="row">
       <div class="col-xs-12">
         <ul>
-          <li class="active">
-            <a href="javascript: void(null);">
-              Главная
-            </a>
-          </li>
-          <li>
-            <a href="javascript: void(null);">
-              Услуги
-            </a>
-          </li>
-          <li>
-            <a href="javascript: void(null);">
-              Цены
-            </a>
-          </li>
-          <li>
-            <a href="javascript: void(null);">
-              Проекты
-            </a>
-          </li>
-          <li>
-            <a href="javascript: void(null);">
-              Информация
-            </a>
-          </li>
-          <li>
-            <a href="javascript: void(null);">
-              Контакты
-            </a>
-          </li>
+          <?php foreach($pages as $page) : ?>
+            <!-- <li class="active"> -->
+            <li>
+              <a href="javascript: void(null)">
+                <?= $page['title']; ?>
+              </a>
+            </li>
+          <?php endforeach ; ?>
         </ul>
       </div>
     </div>
@@ -103,7 +84,10 @@ AdminAsset::register($this);
 </div>
 
 <!-- need include menu component -->
-<?= $this->render('../components/menu') ?>
+<?= $this->render('../components/menu', [
+    'pages' => $pages,
+    'subpages' => $subpages,
+  ]) ?>
 
 <!-- <div id="main" class="navigation__panel">
   <div class="row">

@@ -29,6 +29,7 @@ class Pages extends \yii\db\ActiveRecord
             [['title'], 'required'],
             [['title'], 'string', 'max' => 255],
             [['title'], 'unique'],
+            [['post_id'], 'integer'],
         ];
     }
 
@@ -39,7 +40,8 @@ class Pages extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
+            'title' => 'Заголовок',
+            'post_id' => 'Статья для подменю'
         ];
     }
 }

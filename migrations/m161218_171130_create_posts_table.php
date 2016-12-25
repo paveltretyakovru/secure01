@@ -20,8 +20,8 @@ class m161218_171130_create_posts_table extends Migration
             'longdesc' => $this->text(),
             'image' => $this->string(),
             'menupost' => $this->boolean()->defaultValue(false),
-            'created_at' => $this->datetime()->notNull(),
-            'updated_at' => $this->datetime(),
+            'created_at' => 'timestamp on update current_timestamp',
+            'updated_at' => $this->timestamp()->defaultValue(0),
         ]);
     }
 

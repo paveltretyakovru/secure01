@@ -53,8 +53,13 @@ class PagesController extends Controller
      */
     public function actionView($id)
     {
+        $model = $this->findModel($id);
+        $page_post = \app\models\Post::findOne($model->post_id);
+        $post_title = ($page_post) ? $page_post->title : 'Статья не выбрана';
+
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
+            'post_title' => $post_title,
         ]);
     }
 
@@ -85,12 +90,14 @@ class PagesController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $posts = $this->getPostsArray($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'posts' => $posts,
             ]);
         }
     }
@@ -122,5 +129,19 @@ class PagesController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    private function getPostsArray($id) {
+      $result = [0 => 'Выберите статью для её фиксации в подменю'];
+      $posts = \app\models\Post::find()
+        ->where(['page_id' => $id])
+        ->asArray()
+        ->all();
+
+      foreach($posts as $post) {
+        $result[$post['id']] = $post['title'];
+      }
+
+      return $result;
     }
 }
