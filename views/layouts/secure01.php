@@ -14,6 +14,7 @@ AdminAsset::register($this);
 /* @var $content string */
 
 $pages = \Yii::$app->controller->getMainMenuPages();
+$links = BaseLayoutHelpers::getLinks();
 $slides = BaseLayoutHelpers::getSlides();
 $subpages = \Yii::$app->controller->getSubmenuPages();
 ?>
@@ -129,9 +130,11 @@ $subpages = \Yii::$app->controller->getSubmenuPages();
       </div>
     </div>
     <div class="row quick_links">
-      <div class="col-xs-3">
-        <a href="javascript: void(null);">Быстрые ссылки</a>
-      </div>
+      <?php foreach($links as $link): ?>
+        <div class="col-md-3">
+          <a href="<?=$link->url;?>"><?= $link->title ?></a>
+        </div>
+      <?php endforeach; ?>
     </div>
   </div>
 </div>

@@ -46,6 +46,7 @@ $config = [
               '' => 'site/index',
               '<action>'=>'site/<action>',
               'admin' => 'admin/index',
+              'admin/links' => 'admin/links/index',
               'admin/pages' => 'admin/pages/index',
               'admin/posts' => 'admin/posts/index',
               'admin/slides' => 'admin/slides/index',

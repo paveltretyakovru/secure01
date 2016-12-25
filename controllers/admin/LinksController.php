@@ -14,6 +14,8 @@ use yii\filters\VerbFilter;
  */
 class LinksController extends Controller
 {
+  public $layout = 'secure01Admin';
+
     /**
      * @inheritdoc
      */

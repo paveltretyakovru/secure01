@@ -1,11 +1,16 @@
 <?php namespace common\components;
 
 use app\models\Slide;
+use app\models\Link;
 
 class BaseLayoutHelpers {
   public static function getSlides()
   {
-    $slides = Slide::find()->all();
-    return $slides;
+    return Slide::find()->all();
+  }
+
+  public static function getLinks()
+  {
+    return Link::find()->all();
   }
 }

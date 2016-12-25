@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\LinkSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Links';
+$this->title = 'Ссылки';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="link-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Link', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить ссылку', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

@@ -64,6 +64,12 @@ AdminAsset::register($this);
           Url::to(['admin/slides']);
         ?>">Слайды<span class="sr-only">(current)</span></a></li>
 
+        <li <?=
+          (strpos($this->title, 'Links') !== false) ? 'class="active"' : '';
+        ?>><a href="<?=
+          Url::to(['admin/links']);
+        ?>">Ссылки<span class="sr-only">(current)</span></a></li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/logout">Выход</a></li>
