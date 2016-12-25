@@ -39,8 +39,8 @@ class Ourwork extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'url' => 'Url',
-            'title' => 'Title',
+            'url' => 'Url видео',
+            'title' => 'Заголовок видео',
         ];
     }
 }
