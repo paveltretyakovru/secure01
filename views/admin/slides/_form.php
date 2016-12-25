@@ -29,7 +29,8 @@ $tinyOptions = \yii::$app->controller->getTinyOptions();
             [
               'class' => $model->isNewRecord
                 ? 'btn btn-success'
-                : 'btn btn-primary'
+                : 'btn btn-primary',
+              'style' => 'margin-bottom: 40px',
             ]
           )
         ?>

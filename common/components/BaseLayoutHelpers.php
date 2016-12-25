@@ -1,8 +1,11 @@
 <?php namespace common\components;
 
+use app\models\Slide;
+
 class BaseLayoutHelpers {
-  public static function testMethod()
+  public static function getSlides()
   {
-    return "Hello!!! STATIC!!!!";
+    $slides = Slide::find()->all();
+    return $slides;
   }
 }

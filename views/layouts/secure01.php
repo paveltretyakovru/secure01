@@ -14,6 +14,7 @@ AdminAsset::register($this);
 /* @var $content string */
 
 $pages = \Yii::$app->controller->getMainMenuPages();
+$slides = BaseLayoutHelpers::getSlides();
 $subpages = \Yii::$app->controller->getSubmenuPages();
 ?>
 <?php $this->beginPage() ?>
@@ -92,7 +93,7 @@ $subpages = \Yii::$app->controller->getSubmenuPages();
   ]) ?>
 
 <!-- here setting whyWeSlider component -->
-<?= $this->render('../components/whyWeSlider'); ?>
+<?= $this->render('../components/whyWeSlider', compact('slides')); ?>
 
 <div class="main">
   <div class=" container">
