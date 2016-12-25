@@ -52,7 +52,7 @@ class Post extends \yii\db\ActiveRecord
             'id' => 'ID',
             'page_id' => 'Page ID',
             'title' => 'Заголовок',
-            'desc' => 'Описание',
+            'desc' => 'Короткое описание',
             'longdesc' => 'Длинное описание',
             'image' => 'Изображение',
             'created_at' => 'Создано',

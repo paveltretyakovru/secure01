@@ -67,10 +67,19 @@
                           <!-- Submenu post -->
                           <?php if(!empty($pages[$i]['main_post'])): ?>
                             <div class="col-md-3 text-left">
-                              <?= Html::img(
-                                '/media/'. $pages[$i]['main_post']['image'],
-                                ['width' => '100%']
-                              ); ?>
+                              <?php
+                                $main_post_image = Html::img(
+                                  '/media/'. $pages[$i]['main_post']['image'],
+                                  ['width' => '100%']
+                                );
+                              ?>
+                              <?= Html::a(
+                                $main_post_image,
+                                [
+                                  'posts/view',
+                                  'id' => $pages[$i]['main_post']['id'],
+                                ]
+                              )?>
 
                               <h3><?= $pages[$i]['main_post']['title']; ?></h3>
                               <p><?= $pages[$i]['main_post']['desc']; ?></p>

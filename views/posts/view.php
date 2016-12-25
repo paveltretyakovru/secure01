@@ -1,9 +1,15 @@
 <?php
 /* @var $this yii\web\View */
-?>
-<h1>posts/view</h1>
 
-<p>
-    You may change the content of this page by modifying
-    the file <code><?= __FILE__; ?></code>.
-</p>
+use yii\helpers\Html;
+
+$this->title = $post->title;
+?>
+
+<?= $this->render('../components/title', ['title' => $this->title]) ?>
+
+<div class="row">
+  <div class="col-md-12">
+      <?= $post->longdesc ?>
+  </div>
+</div>
