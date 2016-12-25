@@ -89,149 +89,11 @@ $subpages = \Yii::$app->controller->getSubmenuPages();
     'subpages' => $subpages,
   ]) ?>
 
-<!-- <div id="main" class="navigation__panel">
-  <div class="row">
-    <div class="col-md-3">
-      <a href="javascript: void(null);">
-        1 Проектирование и монтаж
-      </a>
-      <a href="javascript: void(null);">
-        Техническое обслуж. систем любой сложности
-      </a>
-      <a href="javascript: void(null);">
-        Рассчитаем
-      </a>
-      <a href="javascript: void(null);">
-        Разработаем и согласуем
-      </a>
-      <a href="javascript: void(null);">
-        Испытание и защита конструкций
-      </a>
-    </div>
-    <div class="col-md-3">
-      <a href="javascript: void(null);">
-        Проектирование и монтаж
-      </a>
-      <a href="javascript: void(null);">
-        Техническое обслуж. систем любой сложности
-      </a>
-      <a href="javascript: void(null);">
-        Рассчитаем
-      </a>
-      <a href="javascript: void(null);">
-        Разработаем и согласуем
-      </a>
-      <a href="javascript: void(null);">
-        Испытание и защита конструкций
-      </a>
-    </div>
-    <div class="col-md-3">
-      <a href="javascript: void(null);">
-        Проектирование и монтаж
-      </a>
-      <a href="javascript: void(null);">
-        Техническое обслуж. систем любой сложности
-      </a>
-      <a href="javascript: void(null);">
-        Рассчитаем
-      </a>
-      <a href="javascript: void(null);">
-        Разработаем и согласуем
-      </a>
-      <a href="javascript: void(null);">
-        Испытание и защита конструкций
-      </a>
-    </div>
-    <div class="col-md-3">
-      <img src="/img/prod.jpg" alt="">
-      <h3>Пожарная <br> сигнализация</h3>
-      <p>
-        Вы экономите свое время, сразу отсеивая неадекватных или случайных кандидатов.
-      </p>
-      <a href="javascript: void(null);" class="cta">
-        Заказать
-      </a>
-    </div>
-  </div>
-</div> -->
-<!-- <div id="service" class="navigation__panel">
-  <div class="row">
-    <div class="col-md-3">
-      <a href="javascript: void(null);">
-        2 Проектирование и монтаж
-      </a>
-      <a href="javascript: void(null);">
-        Техническое обслуж. систем любой сложности
-      </a>
-      <a href="javascript: void(null);">
-        Рассчитаем
-      </a>
-      <a href="javascript: void(null);">
-        Разработаем и согласуем
-      </a>
-      <a href="javascript: void(null);">
-        Испытание и защита конструкций
-      </a>
-    </div>
-    <div class="col-md-3">
-      <a href="javascript: void(null);">
-        Проектирование и монтаж
-      </a>
-      <a href="javascript: void(null);">
-        Техническое обслуж. систем любой сложности
-      </a>
-      <a href="javascript: void(null);">
-        Рассчитаем
-      </a>
-      <a href="javascript: void(null);">
-        Разработаем и согласуем
-      </a>
-      <a href="javascript: void(null);">
-        Испытание и защита конструкций
-      </a>
-    </div>
-    <div class="col-md-3">
-      <a href="javascript: void(null);">
-        Проектирование и монтаж
-      </a>
-      <a href="javascript: void(null);">
-        Техническое обслуж. систем любой сложности
-      </a>
-      <a href="javascript: void(null);">
-        Рассчитаем
-      </a>
-      <a href="javascript: void(null);">
-        Разработаем и согласуем
-      </a>
-      <a href="javascript: void(null);">
-        Испытание и защита конструкций
-      </a>
-    </div>
-    <div class="col-md-3">
-      <img src="/img/prod.jpg" alt="">
-      <h3>Пожарная <br> сигнализация</h3>
-      <p>
-        Вы экономите свое время, сразу отсеивая неадекватных или случайных кандидатов.
-      </p>
-      <a href="javascript: void(null);" class="cta">
-        Заказать
-      </a>
-    </div>
-  </div>
-</div> -->
-
 <!-- here setting whyWeSlider component -->
 <?= $this->render('../components/whyWeSlider'); ?>
 
 <div class="main">
   <div class=" container">
-    <div class="row">
-      <div class="col-xs-12">
-        <h1>
-          <!-- Услуги -->
-        </h1>
-      </div>
-    </div>
     <div class="row">
       <div class="col-xs-12">
         <?= $content ?>
@@ -245,6 +107,10 @@ $subpages = \Yii::$app->controller->getSubmenuPages();
       </div>
     </div>
   </div>
+</div>
+
+<div class="row">
+
 </div>
 
   <!-- content -->

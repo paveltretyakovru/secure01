@@ -1,9 +1,12 @@
 <?php
 /* @var $this yii\web\View */
+$this->title = $page->title;
 ?>
-<h1>pages/view</h1>
+<!-- Подключаем заголовок -->
+<?= $this->render('../components/title', ['title' => $this->title]) ?>
 
-<p>
-    You may change the content of this page by modifying
-    the file <code><?= __FILE__; ?></code>.
-</p>
+<div class="row">
+  <?php foreach($posts as $post): ?>
+    <?= $this->render('../components/postCard', compact('post')) ?>
+  <?php endforeach; ?>
+</div>

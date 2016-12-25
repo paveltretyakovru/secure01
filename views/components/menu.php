@@ -1,8 +1,6 @@
 
 <?php
   use yii\helpers\Html;
-
-  $menu_post = false;
  ?>
 
 <div class="header__wrapper">
@@ -36,12 +34,11 @@
                   ?>
 
                   <div class="col-xs-4 pull-left text-right navigation__item" data-target="#left-menu-items-<?=$i?>">
-                    <span><?= $pages[$i]['title'] ?></span>
                     <span>
                       <?=
                         Html::a(
                           $pages[$i]['title'],
-                          ['pages/view', 'id' => $subpage['id']]
+                          ['pages/view', 'id' => $pages[$i]['id']]
                         );
                       ?>
                     </span>
@@ -112,7 +109,14 @@
                   ?>
 
                   <div class="col-xs-4 pull-left text-left navigation__item" data-target="#right-menu-items-<?=$i?>">
-                    <span><?= $pages[$i]['title'] ?></span>
+                    <span>
+                      <?=
+                        Html::a(
+                          $pages[$i]['title'],
+                          ['pages/view', 'id' => $pages[$i]['id']]
+                        );
+                      ?>
+                    </span>
 
                     <?php if(count($pages[$i]['subpages'])): ?>
 
