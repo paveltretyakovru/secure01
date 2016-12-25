@@ -5,6 +5,8 @@ use app\assets\VendorBowerAsset;
 use app\assets\AppAsset;
 use app\assets\AdminAsset;
 
+use Common\components\BaseLayoutHelpers;
+
 VendorBowerAsset::register($this);
 AppAsset::register($this);
 AdminAsset::register($this);
