@@ -20,6 +20,7 @@ class PagesSearch extends Pages
         return [
             [['id'], 'integer'],
             [['title'], 'safe'],
+            [['body'], 'string'],
         ];
     }
 
@@ -63,6 +64,8 @@ class PagesSearch extends Pages
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title]);
+
+        $query->andFilterWhere(['like', 'body', $this->body]);
 
         return $dataProvider;
     }

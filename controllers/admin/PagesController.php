@@ -144,4 +144,20 @@ class PagesController extends Controller
 
       return $result;
     }
+
+    public function getTinyOptions() {
+      return [
+        'options' => ['rows' => 6],
+        'language' => 'ru',
+        'clientOptions' => [
+            'plugins' => [
+                "advlist autolink lists link charmap print preview anchor image",
+                "searchreplace visualblocks code fullscreen",
+                "insertdatetime media table contextmenu paste"
+            ],
+            'toolbar' => "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+            'height' => 300,
+        ]
+      ];
+    }
 }

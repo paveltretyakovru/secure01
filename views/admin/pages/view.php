@@ -31,6 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             ['label' => 'Заголовок', 'value' => $model->title],
             ['label' => 'Главная статья для подменю', 'value' => $post_title],
+            ['label' => 'Контент', 'value' => $model->body],
         ],
     ]) ?>
 

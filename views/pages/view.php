@@ -1,4 +1,5 @@
 <?php
+  // @var $page app\models\Pages
   /* @var $this yii\web\View */
   // @var $show_ourworks boolean
   $this->title = $page->title;
@@ -11,6 +12,8 @@
 
         <!-- Подключаем заголовок -->
         <?= $this->render('../components/title', ['title' => $this->title]) ?>
+
+        <?= $page->body ?>
 
         <div class="row">
           <?php foreach($posts as $post): ?>
