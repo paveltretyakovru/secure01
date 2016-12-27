@@ -6,12 +6,12 @@ class m161227_150028_rename_callback_table extends Migration
 {
     public function up()
     {
-      $this->renameTable('callback', 'callbacks');
+      $this->renameTable('callback', 'offers');
     }
 
     public function down()
     {
-        $this->renameTable('callbacks', 'callback');
+        $this->renameTable('offers', 'callback');
     }
 
     /*
