@@ -1,5 +1,6 @@
 <?php
   /* @var $this yii\web\View */
+  // @var $show_ourworks boolean
   $this->title = $page->title;
 ?>
 
@@ -21,3 +22,7 @@
     </div>
   </div>
 </div>
+
+<?php if(!empty($show_ourworks) && $show_ourworks == true): ?>
+  <?= $this->render('../components/aboutUsSlider', []); ?>
+<?php endif; ?>
