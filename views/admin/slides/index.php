@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\SlideSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Slides';
+$this->title = 'Слайды';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="slide-index">
