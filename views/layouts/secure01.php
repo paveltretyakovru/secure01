@@ -96,28 +96,8 @@ $subpages = \Yii::$app->controller->getSubmenuPages();
 <!-- here setting whyWeSlider component -->
 <?= $this->render('../components/whyWeSlider', compact('slides')); ?>
 
-<div class="main">
-  <div class=" container">
-    <div class="row">
-      <div class="col-xs-12">
-        <?= $content ?>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 text-right cta-row">
-        <a href="javascript: void(null);" class="cta">
-          Заказать
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+<?= $content ?>
 
-<div class="row">
-
-</div>
-
-  <!-- content -->
 <!-- footer -->
 <div class="footer">
   <div class="container">

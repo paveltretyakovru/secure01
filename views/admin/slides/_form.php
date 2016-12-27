@@ -13,29 +13,29 @@ $tinyOptions = \yii::$app->controller->getTinyOptions();
 
 <div class="slide-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+  <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
+  <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?=
-      $form->field($model, 'body')
-        ->widget(TinyMce::className(), $tinyOptions);
-    ?>
+  <?=
+    $form->field($model, 'body')
+      ->widget(TinyMce::className(), $tinyOptions);
+  ?>
 
-    <div class="form-group">
-        <?=
-          Html::submitButton(
-            $model->isNewRecord ? 'Создать' : 'Обновить',
-            [
-              'class' => $model->isNewRecord
-                ? 'btn btn-success'
-                : 'btn btn-primary',
-              'style' => 'margin-bottom: 40px',
-            ]
-          )
-        ?>
-    </div>
+  <div class="form-group">
+      <?=
+        Html::submitButton(
+          $model->isNewRecord ? 'Создать' : 'Сохранить',
+          [
+            'class' => $model->isNewRecord
+              ? 'btn btn-success'
+              : 'btn btn-primary',
+            'style' => 'margin-bottom: 40px',
+          ]
+        )
+      ?>
+  </div>
 
-    <?php ActiveForm::end(); ?>
+  <?php ActiveForm::end(); ?>
 
 </div>
