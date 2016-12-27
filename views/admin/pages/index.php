@@ -19,6 +19,10 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Добавить страницу', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
+    <div class="alert alert-info" role="alert">
+      Страница с id = 1, является главной/начальной страницей сайта
+    </div>
+
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
