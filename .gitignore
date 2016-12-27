@@ -31,3 +31,6 @@ phpunit.phar
 
 tests/_output/*
 tests/_support/_generated
+
+# Ignore new pdf files
+web/pdf

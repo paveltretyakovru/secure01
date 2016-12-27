@@ -52,6 +52,7 @@ $config = [
               'admin/posts' => 'admin/posts/index',
               'admin/slides' => 'admin/slides/index',
               'admin/ourworks' => 'admin/ourworks/index',
+              'admin/presentation' => 'admin/presentation/index',
               'admin/<controller>/<action>' => 'admin/<controller>/<action>'
             ],
         ],
