@@ -50,6 +50,7 @@ $config = [
               'admin/pages' => 'admin/pages/index',
               'admin/posts' => 'admin/posts/index',
               'admin/slides' => 'admin/slides/index',
+              'admin/ourworks' => 'admin/ourworks/index',
               'admin/<controller>/<action>' => 'admin/<controller>/<action>'
             ],
         ],

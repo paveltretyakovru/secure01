@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Ourwork */
 
-$this->title = 'Create Ourwork';
+$this->title = 'Добавить "наша работа"';
 $this->params['breadcrumbs'][] = ['label' => 'Ourworks', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

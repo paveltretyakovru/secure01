@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\OurworkSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Ourworks';
+$this->title = 'Наши работы';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="ourwork-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Ourwork', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить ролик', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
