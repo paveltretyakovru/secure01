@@ -10,7 +10,7 @@ class UploadPresentation extends Model
   public function rules()
   {
     return [
-      [['file'], 'file'],
+      [['file'], 'file', 'skipOnEmpty' => false, 'extensions' => 'pdf'],
     ];
   }
 }

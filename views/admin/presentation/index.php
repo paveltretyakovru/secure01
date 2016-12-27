@@ -18,3 +18,7 @@
 
   <?php ActiveForm::end() ?>
 </p>
+
+<div class="alert alert-info" role="alert">
+  Файл презентации должен быть в формате PDF
+</div>
