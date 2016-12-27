@@ -82,6 +82,12 @@ AdminAsset::register($this);
           Url::to(['admin/presentation']);
         ?>">Презентация<span class="sr-only">(current)</span></a></li>
 
+        <li <?=
+          (strpos($this->title, 'Callbacks') !== false) ? 'class="active"' : '';
+        ?>><a href="<?=
+          Url::to(['admin/callbacks']);
+        ?>">Звонки<span class="sr-only">(current)</span></a></li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/logout">Выход</a></li>
