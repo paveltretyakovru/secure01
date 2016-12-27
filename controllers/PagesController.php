@@ -25,9 +25,10 @@ class PagesController extends \yii\web\Controller
   public function actionView($id)
   {
     $page = Pages::findOne($id);
+    $show_ourworks = ($id == 1) ? true : false;
     if($page) {
       $posts = Post::find()->where(['page_id' => $id])->all();
-      return $this->render('view', compact('page', 'posts'));
+      return $this->render('view', compact('page', 'posts', 'show_ourworks'));
     } else {
       return $this->redirect(['site/index']);
     }
