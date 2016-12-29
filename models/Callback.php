@@ -44,11 +44,11 @@ class Callback extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'phone' => 'Phone',
-            'comment' => 'Comment',
-            'updated_at' => 'Updated At',
-            'created_at' => 'Created At',
+            'name' => 'Имя',
+            'phone' => 'Телефон',
+            'comment' => 'Комментарий',
+            'updated_at' => 'Обновлено',
+            'created_at' => 'Создано',
         ];
     }
 }
