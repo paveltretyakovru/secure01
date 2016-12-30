@@ -164,7 +164,7 @@ $subpages = \Yii::$app->controller->getSubmenuPages();
         <label for="inputCallbackPhone">Номер телефона</label>
         <input class="form-control" type="text" name="phone" id="inputCallbackPhone" />
       </div>
-      <button type="submit" class="btn btn-default">
+      <button class="btn btn-default">
         Заказать обратный звонок
       </button>
     </form>

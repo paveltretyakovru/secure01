@@ -54,7 +54,9 @@ $config = [
               'admin/ourworks' => 'admin/ourworks/index',
               'admin/callbacks' => 'admin/callbacks/index',
               'admin/presentation' => 'admin/presentation/index',
-              'admin/<controller>/<action>' => 'admin/<controller>/<action>'
+              'admin/<controller>/<action>' => 'admin/<controller>/<action>',
+
+              'callbacks/<action>' => 'callbacks/<action>',
             ],
         ],
     ],
@@ -63,12 +65,12 @@ $config = [
 
 if (YII_ENV_DEV) {
     // configuration adjustments for 'dev' environment
-    $config['bootstrap'][] = 'debug';
-    $config['modules']['debug'] = [
-        'class' => 'yii\debug\Module',
+    // $config['bootstrap'][] = 'debug';
+    // $config['modules']['debug'] = [
+    //     'class' => 'yii\debug\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
-    ];
+    // ];
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [

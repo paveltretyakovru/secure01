@@ -44,7 +44,7 @@
     </div>
     <div class="row">
       <div class="col-xs-12 text-left">
-        <a href="javascript: void(null);" class="cta">
+        <a href="javascript: void(null);" data-source="ourworks" class="cta">
           Заказать
         </a>
       </div>
