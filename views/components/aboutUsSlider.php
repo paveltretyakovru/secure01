@@ -26,6 +26,10 @@
                   height="315"
                   src="https://www.youtube.com/embed/<?= $ourwork['video_id'] ?>"
                   frameborder="0" allowfullscreen></iframe>
+
+                  <a href="#" data-source="ourworks" data-source-id="<?= $ourwork['id'] ?>" class="cta">
+                    Заказать
+                  </a>
               </div>
             <?php endforeach; ?>
 
@@ -42,12 +46,12 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-xs-12 text-left">
-        <a href="javascript: void(null);" data-source="ourworks" class="cta">
+        <a href="javascript: void(null);" data-source="ourworks" data-source-id="" class="cta">
           Заказать
         </a>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

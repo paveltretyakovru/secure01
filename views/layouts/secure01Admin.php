@@ -47,46 +47,58 @@ AdminAsset::register($this);
       <ul class="nav navbar-nav">
 
         <li <?=
-          (strpos($this->title, 'Pages') !== false) ? 'class="active"' : '';
+          (strpos($this->title, 'Страницы') !== false) ? 'class="active"' : '';
         ?>><a href="<?=
           Url::to(['admin/pages']);
         ?>">Страницы<span class="sr-only">(current)</span></a></li>
 
         <li <?=
-          (strpos($this->title, 'Posts') !== false) ? 'class="active"' : '';
+          (strpos($this->title, 'Посты') !== false) ? 'class="active"' : '';
         ?>><a href="<?=
           Url::to(['admin/posts']);
         ?>">Статьи<span class="sr-only">(current)</span></a></li>
 
         <li <?=
-          (strpos($this->title, 'Slides') !== false) ? 'class="active"' : '';
+          (strpos($this->title, 'Слайды') !== false) ? 'class="active"' : '';
         ?>><a href="<?=
           Url::to(['admin/slides']);
         ?>">Слайды<span class="sr-only">(current)</span></a></li>
 
         <li <?=
-          (strpos($this->title, 'Links') !== false) ? 'class="active"' : '';
+          (strpos($this->title, 'Ссылки') !== false) ? 'class="active"' : '';
         ?>><a href="<?=
           Url::to(['admin/links']);
         ?>">Ссылки<span class="sr-only">(current)</span></a></li>
 
         <li <?=
-          (strpos($this->title, 'Ourworks') !== false) ? 'class="active"' : '';
+          (strpos($this->title, 'Наши работы') !== false) ? 'class="active"' : '';
         ?>><a href="<?=
           Url::to(['admin/ourworks']);
         ?>">Наши работы<span class="sr-only">(current)</span></a></li>
 
         <li <?=
-          (strpos($this->title, 'Presentation') !== false) ? 'class="active"' : '';
+          (strpos($this->title, 'Загрузка презентации') !== false) ? 'class="active"' : '';
         ?>><a href="<?=
           Url::to(['admin/presentation']);
         ?>">Презентация<span class="sr-only">(current)</span></a></li>
 
         <li <?=
-          (strpos($this->title, 'Callbacks') !== false) ? 'class="active"' : '';
+          (strpos($this->title, 'Обратные звонки') !== false) ? 'class="active"' : '';
         ?>><a href="<?=
           Url::to(['admin/callbacks']);
         ?>">Звонки<span class="sr-only">(current)</span></a></li>
+
+        <li <?=
+          (strpos($this->title, 'Заказы') !== false) ? 'class="active"' : '';
+        ?>><a href="<?=
+          Url::to(['admin/offers']);
+        ?>">Заказы<span class="sr-only">(current)</span></a></li>
+
+        <li <?=
+          (strpos($this->title, 'Email рассылки') !== false) ? 'class="active"' : '';
+        ?>><a href="<?=
+          Url::to(['admin/emails']);
+        ?>">Email рассылки<span class="sr-only">(current)</span></a></li>
 
       </ul>
       <ul class="nav navbar-nav navbar-right">

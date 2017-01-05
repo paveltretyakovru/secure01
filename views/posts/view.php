@@ -6,10 +6,17 @@ use yii\helpers\Html;
 $this->title = $post->title;
 ?>
 
-<?= $this->render('../components/title', ['title' => $this->title]) ?>
+<div class="main">
+  <div class=" container">
+    <div class="row">
+      <div class="col-xs-12">
 
-<div class="row">
-  <div class="col-md-12">
-      <?= $post->longdesc ?>
+        <!-- Подключаем заголовок -->
+        <?= $this->render('../components/title', ['title' => $this->title]) ?>
+
+        <?= $post->longdesc ?>
+
+      </div>
+    </div>
   </div>
 </div>

@@ -120,7 +120,7 @@ $subpages = \Yii::$app->controller->getSubmenuPages();
 </div>
 
 <!-- Modals -->
-<!-- ORDER MODAL -->
+<!-- OFFER MODAL -->
 <div style="display: none;">
   <div class="box-modal" id="orderModal">
     <div class="box-modal_close arcticmodal-close">
@@ -143,11 +143,13 @@ $subpages = \Yii::$app->controller->getSubmenuPages();
         <label for="textareaOrderMessage">Сообщение*</label>
         <textarea class="form-control" name="message" rows="8" cols="40"></textarea>
       </div>
+      <input type="hidden" name="type" value="">
+      <input type="hidden" name="type-id" value="">
       <button type="submit" class="btn btn-default">Заказать</button>
     </form>
   </div>
 </div>
-<!-- /ORDER MODAL -->
+<!-- /OFFER MODAL -->
 
 <!-- CALLBACK MODAL -->
 <div style="display: none;">

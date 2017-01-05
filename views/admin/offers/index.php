@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\PostSearch */
+/* @var $searchModel app\models\OfferSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Посты';
+$this->title = 'Заказы';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="post-index">
+<div class="offer-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Создать пост', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать заказ', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -26,28 +26,24 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'page_id',
-            'title',
-            'desc:ntext',
-            'longdesc:ntext',
+            'name',
+            'phone',
+            'subject',
+            'message:ntext',
+            'feedback',
+            'created_at',
+            'type',
             [
-              'attribute' => 'image',
+              'attribute' => 'type',
               'format' => 'html',
               'value' => function($data) {
-                if(!empty($data['image'])) {
-                  return Html::img(
-                    '/media/' . $data['image'],
-                    [
-                      'width' => 100,
-                    ]
-                  );
+                if(!empty($data['type_id'])) {
+                  return $data['type'] . ' id = ' . $data['type_id'];
                 } else {
-                  return '';
+                  return $data['type'];
                 }
               },
             ],
-            // 'created_at',
-            // 'updated_at',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

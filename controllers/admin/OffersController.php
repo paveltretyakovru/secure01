@@ -3,18 +3,21 @@
 namespace app\controllers\admin;
 
 use Yii;
-use app\models\Pages;
-use app\models\PagesSearch;
+use app\models\Offer;
+use app\models\OfferSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * PagesController implements the CRUD actions for Pages model.
+ * OffersController implements the CRUD actions for Offer model.
  */
-class PagesController extends Controller
+class OffersController extends Controller
 {
-    public $layout = 'secure01Admin';
+  public $layout = 'secure01Admin';
+  public $types = [
+    'ourworks' => 'Наши работы',
+  ];
 
     /**
      * @inheritdoc
@@ -32,12 +35,12 @@ class PagesController extends Controller
     }
 
     /**
-     * Lists all Pages models.
+     * Lists all Offer models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new PagesSearch();
+        $searchModel = new OfferSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -47,44 +50,38 @@ class PagesController extends Controller
     }
 
     /**
-     * Displays a single Pages model.
+     * Displays a single Offer model.
      * @param integer $id
      * @return mixed
      */
     public function actionView($id)
     {
-        $model = $this->findModel($id);
-        $page_post = \app\models\Post::findOne($model->post_id);
-        $post_title = ($page_post) ? $page_post->title : 'Статья не выбрана';
-
         return $this->render('view', [
-            'model' => $model,
-            'post_title' => $post_title,
+            'model' => $this->findModel($id),
         ]);
     }
 
     /**
-     * Creates a new Pages model.
+     * Creates a new Offer model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Pages();
-        $posts = $this->getPostsArray();
+        $model = new Offer();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
-                'posts' => $posts,
+                'types' => $this->types,
             ]);
         }
     }
 
     /**
-     * Updates an existing Pages model.
+     * Updates an existing Offer model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -92,20 +89,19 @@ class PagesController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        $posts = $this->getPostsArray($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
-                'posts' => $posts,
+                'types' => $this->types,
             ]);
         }
     }
 
     /**
-     * Deletes an existing Pages model.
+     * Deletes an existing Offer model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -118,54 +114,18 @@ class PagesController extends Controller
     }
 
     /**
-     * Finds the Pages model based on its primary key value.
+     * Finds the Offer model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Pages the loaded model
+     * @return Offer the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Pages::findOne($id)) !== null) {
+        if (($model = Offer::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
-    }
-
-    private function getPostsArray($id = 0) {
-      $result = [0 => 'Выберите статью для её фиксации в подменю'];
-      if($id) {
-        $posts = \app\models\Post::find()
-        ->where(['page_id' => $id])
-        ->asArray()
-        ->all();
-      } else {
-        $posts = \app\models\Post::find()
-        ->asArray()
-        ->all();
-      }
-
-      foreach($posts as $post) {
-        $result[$post['id']] = $post['title'];
-      }
-
-      return $result;
-    }
-
-    public function getTinyOptions() {
-      return [
-        'options' => ['rows' => 6],
-        'language' => 'ru',
-        'clientOptions' => [
-            'plugins' => [
-                "advlist autolink lists link charmap print preview anchor image",
-                "searchreplace visualblocks code fullscreen",
-                "insertdatetime media table contextmenu paste"
-            ],
-            'toolbar' => "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
-            'height' => 300,
-        ]
-      ];
     }
 }

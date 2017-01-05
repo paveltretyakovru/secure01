@@ -19,7 +19,7 @@
                     <p>
                       <?= $slide->body ?>
                     </p>
-                    <a href="javascript: void(null);" class="cta">
+                    <a href="#" data-source="sliders" data-source-id="<?= $slide->id ?>" class="cta">
                       Заказать
                     </a>
                   </div>
